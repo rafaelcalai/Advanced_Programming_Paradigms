@@ -3,4 +3,6 @@ project(PL1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(PL1 main.c)
+add_executable(PL1 exercise3.c)
+
+target_link_libraries(PL1 pthread)
