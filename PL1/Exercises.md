@@ -63,9 +63,16 @@ array global. The decision on the pivot is irrelevant (e.g. take the first).\
 a. Implement a version where each recursive call is performed by a new thread\
 b. Implement a version where recursive calls are done by the same thread if the size of the sublist is
 smaller than a predefined threshold\
-d. Determine the time it takes to perform the sorting in the previous versions, and compare it to a
+c. Determine the time it takes to perform the sorting in the previous versions, and compare it to a
 sequential implementation. Use also different sizes of the array. What can you conclude?
 
+
+#### Answer:
+```
+The recursive approach is better in this case. Threads are slow in this case as all of them use the same memory address 
+and is necessary the use of mutex, what makes only one thread to access the critical area. 
+
+```
 ## 5 - Thread Pools
 Write a Pthreads program that implements a thread pool concept and a “task queue.” The main thread
 begins by creating a starting a specified number of threads that immediately go to sleep in a condition

@@ -3,6 +3,8 @@ project(PL1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(PL1 exercise3.c)
+add_executable(Exercise3 exercise3.c)
+add_executable(Exercise4 exercise4.c)
 
-target_link_libraries(PL1 pthread)
+target_link_libraries(Exercise3 pthread)
+target_link_libraries(Exercise4 pthread)
