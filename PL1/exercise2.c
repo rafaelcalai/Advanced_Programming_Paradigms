@@ -95,6 +95,6 @@ void * Barber(void * data){
         pthread_mutex_unlock(&queue);
 
         usleep( 1000000 * (rand() % 10 + 1));
-        printf("BARBER%d  -> Finished the haircut. \n", *(int *)data);
+        printf("BARBER%d  -> Haircut finished. \n", *(int *)data);
     }
 }
